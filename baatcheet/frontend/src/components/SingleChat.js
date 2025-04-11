@@ -13,7 +13,7 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
 
-const ENDPOINT = "http://localhost:5000"; // "https://baatcheet.herokuapp.com"; -> After deployment
+const ENDPOINT = "https://baatcheet-xf7u.onrender.com/";
 
 var socket, selectedChatCompare;
 
