@@ -13,7 +13,9 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
 
-const ENDPOINT = "https://baatcheet-xf7u.onrender.com/";
+const ENDPOINT = process.env.NODE_ENV === 'development' 
+  ? "http://localhost:5000" 
+  : process.env.REACT_APP_API_URL 
 
 var socket, selectedChatCompare;
 
