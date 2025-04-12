@@ -61,8 +61,9 @@ const server = app.listen(
   PORT,
   console.log(`Server running on PORT ${PORT}...`.yellow.bold)
 );
+const serverEndpoint = "https://baatcheet-xf7u.onrender.com/";
 
-const io = require("socket.io")(server, {
+const io = require("socket.io")(serverEndpoint, {
   pingTimeout: 60000,//pingTimeout is the time in ms to wait for ping response from the client before closing the connection
   cors: {
     origin: "http://localhost:3000", //corse is a security feature that allows or restricts resources to be requested from another domain outside the domain from which the first resource was served.
